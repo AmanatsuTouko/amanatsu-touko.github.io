@@ -2,7 +2,6 @@
 ポートフォリオサイトです。
 
 アクセスはこちらから
-
 →https://amanatsutouko.github.io/
 
 お借りした素材
