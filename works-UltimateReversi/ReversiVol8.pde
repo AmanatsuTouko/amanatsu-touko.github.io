@@ -377,7 +377,7 @@ void skill(int n) {
       break;
   }
 
-  println("skill" + n + "発動!");
+  //println("skill" + n + "発動!");
 }
 
 //ログに技の名前を記載するよう
@@ -747,7 +747,7 @@ void mouseReleased() {
             if (risetCount!=8) {
               //println((8-risetCount)+"方向の有効判定");
               turn++;
-              println("turn = "+turn);
+              //println("turn = "+turn);
               if (turn%2==0)changeValue=0;
               if (turn%2==1)changeValue=9;
               updateStones();
@@ -767,7 +767,7 @@ void mouseReleased() {
               if (risetCount!=8) {
                 //println((8-risetCount)+"方向の有効判定");
                 turn++;
-                println("turn = "+turn);
+                //println("turn = "+turn);
                 if (turn%2==0)changeValue=0;
                 if (turn%2==1)changeValue=9;
                 updateStones();
@@ -793,8 +793,8 @@ void mouseReleased() {
     //skipボタン
     if (635<x && x<735 && 535<y && y<585) {
       turn++;
-      print("skiped ");
-      println("turn = "+turn);
+      //print("skiped ");
+      //println("turn = "+turn);
       saveStone();
       if (turn%2==0)changeValue=0;
       if (turn%2==1)changeValue=9;
@@ -819,8 +819,8 @@ void mouseReleased() {
           if (110+20*(i) < y && y < 130+20*(i)) {
             if (i%2==turn%2)turn++;
 
-            println("loaded " + (i+1+logCount));
-            println("turn = "+turn);
+            //println("loaded " + (i+1+logCount));
+            //println("turn = "+turn);
             saveStone();
             if (turn%2==0)changeValue=0;
             if (turn%2==1)changeValue=9;
@@ -842,17 +842,17 @@ void mouseReleased() {
     //skill1ボタン
     if (635<x && x<735 && 475<y && y<525) {
       print("skill1 did ");
-      println("turn = "+turn);
+      //println("turn = "+turn);
 
-      println("whiteskill1" + whiteskill1);
-      println("blackskill1" + blackskill1);
+      //println("whiteskill1" + whiteskill1);
+      //println("blackskill1" + blackskill1);
 
       //白プレイヤーの時
       if (turn%2==0) {
 
         if(whiteskill1 != 0)
         {
-          println("whiteskill1 != 0");
+          //println("whiteskill1 != 0");
           skill(int(whiteskill1));
           if (whiteskill1!=5)
           {
@@ -920,10 +920,10 @@ void mouseReleased() {
     //skill2ボタン
     if (765<x && x<865 && 475<y && y<525) {
       print("skill2 did ");
-      println("turn = "+turn);
+      //println("turn = "+turn);
 
-      println("whiteskill2" + whiteskill2);
-      println("blackskill2" + blackskill2);
+      //println("whiteskill2" + whiteskill2);
+      //println("blackskill2" + blackskill2);
 
       //白プレイヤーの時
       if (turn%2==0) {
@@ -972,21 +972,21 @@ void keyPressed() {
   switch( key ) {
   case ENTER:
   case RETURN:
-    println( "ENTERキーが押された" );
+    //println( "ENTERキーが押された" );
     reDraw();
     break;
   case BACKSPACE:
-    println( "BACKSPACEキーが押された" );
+    //println( "BACKSPACEキーが押された" );
     break;
   case TAB:
-    println( "TABキーが押された" );
+    //println( "TABキーが押された" );
     break;
   case DELETE:
-    println( "DELETEキーが押された" );
-    println(vacantNumber());
+    //println( "DELETEキーが押された" );
+    //println(vacantNumber());
     break;
   case ' ':
-    println( "SPACEキーが押された");
+    //println( "SPACEキーが押された");
     if (skillReview %2 ==  0 && mode == 2) {
       if (turn%2==0)playerSkillView1();
       if (turn%2==1)playerSkillView2();
@@ -996,7 +996,7 @@ void keyPressed() {
     skillReview++;
     break;
   default:
-    println( key + "が押された" );
+    //println( key + "が押された" );
     break;
   }
 }
