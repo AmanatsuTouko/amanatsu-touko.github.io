@@ -9,6 +9,7 @@ a {
   transition: opacity .3s;
   text-decoration: none;
   color: #1ca9e3;
+  display: block;
 }
 
 img {
@@ -72,15 +73,21 @@ SNSリンク
 .social {
   position: fixed;
   bottom: 20px;
-  margin-left: 10px;
+  left: -260px;
+  /*
+  SNSの名前が見える位置 : -200px
+  SNSのアイコンだけ見える位置 : -260px
+  */
 }
 .social ul {
   padding: 0px;
+  /*
   -webkit-transform: translate(-270px, 0);
   -moz-transform: translate(-270px, 0);
   -ms-transform: translate(-270px, 0);
   -o-transform: translate(-270px, 0);
   transform: translate(-270px, 0);
+  */
 }
 .social ul li {
   display: block;
@@ -501,7 +508,9 @@ SNSリンク
   text-align: center;
 }
 
-/*media Queries 767
+/*---------------------------------------------------
+media Queries 767
+画面サイズが767pxまではここを読み込む
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
   body {
@@ -563,7 +572,13 @@ SNSリンク
     display: none;
   }
 
-  /*  メインビジュアル */
+  /* SNSリンク */
+  /* スマホ版はfixedしない */
+  .social {
+    position: absolute;
+  }
+
+  /* メインビジュアル */
   .mv {
     height: 75vh;
   }
