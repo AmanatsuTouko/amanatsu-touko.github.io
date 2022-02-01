@@ -288,11 +288,11 @@ SNSリンク
 .works-item {
   width: 31.74603%;
   margin-right: 1.58730%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   color: #333;
 }
 .works-item:hover {
-  opacity: .9;
+  opacity: .5;
 }
 .works-item:nth-of-type(3n) {
   margin-right: 0;
@@ -316,6 +316,9 @@ SNSリンク
   margin-right: 1.58730%;
   margin-bottom: 40px;
   color: #333;
+}
+.works-item-illust:hover {
+  opacity: .5;
 }
 .works-item:nth-of-type(5n) {
   margin-right: 0;
