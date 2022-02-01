@@ -67,10 +67,35 @@
               WEBカメラを用いて指の向きを認識し、流れてくるランドルト環を捌くゲームです。
             </p>
 
+            <h3>ゲームイメージ</h3>
+            <div class="works-list">
+              <a class="works-item" href="img/works/HighSpeedVisionTest/VisionTest.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/VisionTest.png" alt="" /></div>
+              </a>
+              <a class="works-item" href="img/works/HighSpeedVisionTest/RythmGame_GamingDistrict.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/RythmGame_GamingDistrict.png" alt="" /></div>
+              </a>
+              <a class="works-item" href="img/works/HighSpeedVisionTest/RythmGame_ImperialJade.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/RythmGame_ImperialJade.png" alt="" /></div>
+              </a>
+              <a class="works-item" href="img/works/HighSpeedVisionTest/result_VisionTest.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/result_VisionTest.png" alt="" /></div>
+              </a>
+              <a class="works-item" href="img/works/HighSpeedVisionTest/result_RythmGame.png" data-lightbox="group" style="margin-right: 1.58730%">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/result_RythmGame.png" alt="" /></div>
+              </a>
+              <a class="works-item" href="img/works/HighSpeedVisionTest/ranking.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/ranking.png" alt="" /></div>
+              </a>
+              <p>
+                画像クリックで拡大します。
+              </p>
+            </div>
+
             <h3>担当</h3>
             <p>
               ゲームデザイン・コーディング・キャラクターデザイン・UIなど、ゲーム内楽曲以外全て。<br>
-              相方にはリズムゲーム中の楽曲2曲を作成してもらいました。
+              相方にはリズムゲーム中の楽曲2曲の作成と譜面データ作成を担当してもらいました。
             </p>
 
             <h3>制作期間/使用したツールなど</h3>
@@ -88,6 +113,7 @@
             </p>
 
             <h3>工夫・苦労した点</h3>
+            <h4>◆デザインコンセプト</h4>
             <p>
               「入力がうまくいかない、コントローラーを使わないゲーム」をコンセプトに考えました。<br>
               普段ならボタンを押すだけなのに操作がうまくいかない、<br>
@@ -95,7 +121,48 @@
               流行病が流行っている中、結果的に感染対策の面でも<br>
               優れているゲームになったことがアピールポイントです。<br>
               WEBカメラでの認識とノーツと楽曲の音ズレの改善に苦労しました。<br>
-              ランキング機能の実装にも苦労しました。スコアデータはtxtファイルに書き出しています。
+            </p>
+
+            <h4>◆WEBカメラとキー入力の両方に対応</h4>
+            <p>
+              ダウンロードしたPCにWEBカメラがなくても遊べるようにしました。
+            </p>
+
+            <h4>◆WEBカメラの認識のキャリブレーション</h4>
+            <div class="works-list">
+              <a class="works-item-illust" href="img/works/HighSpeedVisionTest/calibration_before.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/calibration_before.png" alt="" /></div>
+                <p class="works-info">閾値の調整前</p>
+              </a>
+              <a class="works-item-illust" href="img/works/HighSpeedVisionTest/calibration_before_white.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/calibration_before_white.png" alt="" /></div>
+                <p class="works-info">2値化画像(前)</p>
+              </a>
+              <a class="works-item-illust" href="img/works/HighSpeedVisionTest/calibration_after.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/calibration_after.png" alt="" /></div>
+                <p class="works-info">閾値の調整後</p>
+              </a>
+              <a class="works-item-illust" href="img/works/HighSpeedVisionTest/calibration_after_white.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/calibration_after_white.png" alt="" /></div>
+                <p class="works-info">2値化画像(後)</p>
+              </a>
+              <a class="works-item-illust" href="img/works/HighSpeedVisionTest/setting.png" data-lightbox="group">
+                <div class="works-img"><img src="img/works/HighSpeedVisionTest/setting.png" alt="" /></div>
+                <p class="works-info">設定画面</p>
+              </a>
+            </div>
+            <p>
+              WEBカメラからの画像を2値化してOpenCVで処理しているため、<br>
+              照明の度合いによって認識精度が変わります。<br>
+              そのため、2値化する閾値をゲーム内から変更できるようにしました。<br>
+            </p>
+
+            <h4>◆ランキングデータのtxtファイルへの書き出し</h4>
+            <p>
+              展示中のバグがあった際に、ゲームを作り直す可能性がありました。<br>
+              その際、Unityの PlayerPrefs.SetFloat()関数 で保存しているとデータが取り出せなくなります。<br>
+              外部ファイルに書き出せばデータを移動できます。<br>
+              また、データの消去もDLしてくれたユーザが行えるようにしました。
             </p>
 
             <h3>URL</h3>
@@ -106,13 +173,17 @@
 
             <h3>関連記事</h3>
             <p>
+              <h4>
+                <a href="https://qiita.com/amanatsutouko/items/02ce52c1ffc7ff2937a5" target="_blank" rel="noopener">OpenCVforUnityを使った、カメラ映像から手の向き認識 - Qiita</a>
+              </h4>
+              <br>手の向き認識のコードについてはこちらに纏めました。
+            </p>
+
+            <p>
               <iframe class="note-embed" src="https://note.com/embed/notes/n89a1e9460b70" style="border: 0; display: block; max-width: 99%; width: 750px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe><script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
               経緯や進捗スケジュール、苦労したエラーの話など纏めています。
             </p>
-            <p>
-              <a href="https://qiita.com/amanatsutouko/items/02ce52c1ffc7ff2937a5" target="_blank" rel="noopener">OpenCVforUnityを使った、カメラ映像から手の向き認識 - Qiita</a>
-              <br>手の向き認識のコードについてはこちらに纏めました。
-            </p>
+            
             <p>
               <iframe class="note-embed" src="https://note.com/embed/notes/n5b979452ee4b" style="border: 0; display: block; max-width: 99%; width: 750px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe><script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
               <iframe class="note-embed" src="https://note.com/embed/notes/n7c7e3e2d71a4" style="border: 0; display: block; max-width: 99%; width: 750px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe><script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
