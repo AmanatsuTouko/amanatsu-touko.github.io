@@ -1,4 +1,5 @@
-# ポートフォリオサイトです。
+# AMANATSU TOUKO Portfolio
+ポートフォリオサイトです。
 
 アクセスはこちらから
 →https://amanatsutouko.github.io/
