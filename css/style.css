@@ -283,12 +283,17 @@ SNSリンク
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -40px;
+  justify-content:space-start;
+  /* justify-content:space-between; */
+  /* justify-content:space-evenly; */
+  column-gap:1%;
 }
 
 .works-item {
-  width: 31.74603%;
-  margin-right: 1.58730%;
-  margin-bottom: 10px;
+  width: 32.6%;
+  margin-top:20px; 
+  /* margin-bottom: 10px; */
+  margin-bottom: 1%;
   color: #333;
 }
 .works-item:hover {
@@ -313,7 +318,7 @@ SNSリンク
 /*illust表示用に追加*/
 .works-item-illust {
   width: 18%;
-  margin-right: 1.58730%;
+  /* margin-right: 1.58730%; */
   margin-bottom: 40px;
   color: #333;
 }
