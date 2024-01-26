@@ -60,9 +60,11 @@
           <div class="article-body">
             <p>
               <div class="iframe-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8VymBgM4t-k?si=TugcdCRi-0B9cgwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0TEb3dPSnbA?si=TKlVhgU0Qw5gZTDe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </p>
+
+
             <p>
               明大祭2023, ゲームクリエイター甲子園にて発表したアクションゲームです。<br>
               暗闇の中で光を駆使して最大4vs4で戦う、オンライン対戦型FPSゲームです。
@@ -111,17 +113,6 @@
               使用ツール：Unity, Photon Unity Networking(PUN2), ClipStudioPaintPro<br>
             </p>
 
-            <!-- 
-              <h3>明大祭展示当日の様子</h3>
-            <p>
-              <div class="iframe-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/CPJ64TUzB30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              Joy-Conを使って、小学生から大人の方まで幅広い年齢層の方にプレイしていただきました。<br>
-              3日間開催された明大祭では、計150名にプレイしてもらいました。
-            </p>
-            -->
-
             <h3>デザインコンセプト</h3>
             <p>
               視覚情報が失われた状態の "真っ暗で何も見えない" ワクワク感を<br>
@@ -131,6 +122,19 @@
             </p>
 
             <h3>工夫・苦労した点</h3>
+
+            <div class="works-list">
+              <a class="works-item" href="img/works/yamiuchi/double-gun-large.gif" data-lightbox="group">
+                <div class="works-img"><img src="img/works/yamiuchi/double-gun-small.gif" alt="" /></div>
+                <p class="works-info">①視点による見える銃の変化</p>
+              </a>
+              <a class="works-item" href="img/works/yamiuchi/occlusion-culling-large.gif" data-lightbox="group">
+                <div class="works-img"><img src="img/works/yamiuchi/occlusion-culling-small.gif" alt="" /></div>
+                <p class="works-info">②オクルージョンカリング</p>
+              </a>
+            </div>
+            <p></p>
+
             <h4>◆オンライン対戦を実装する</h4>
             <p>
               Photon Unity Networking(PUN2)を用いて、<br>
@@ -144,6 +148,14 @@
               同期を行えるようにしたりしています。<br>
             </p>
 
+            <h4>◆銃のオブジェクトを2つ用意する</h4>
+            <p>
+              Aim時の挙動の実装と、没入感の向上のために<br>
+              銃のオブジェクトを自分視点用と相手視点用で2つ用意しました。<br>
+              相手視点ではアニメーションに追従する銃を<br>
+              自分視点では視点操作に追従する銃を持っているようにしました。<br>
+            </p>
+
             <h4>◆最適化の導入</h4>
             <p>
               頻繁に描画する必要のある光線銃の発射体を<br>
@@ -153,12 +165,42 @@
               ※1人接続時に開発環境(Intel corei7-10700, NVIDIA GeForce RTX 2060)で計測<br>
             </p>
 
+            <!-- 
+              <h3>明大祭展示当日の様子</h3>
+            <p>
+              <div class="iframe-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CPJ64TUzB30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              Joy-Conを使って、小学生から大人の方まで幅広い年齢層の方にプレイしていただきました。<br>
+              3日間開催された明大祭では、計150名にプレイしてもらいました。
+            </p>
+            -->
+
+            <h3>ゲームクリエイター甲子園での紹介動画</h3>
+            <p>
+              <div class="iframe-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8VymBgM4t-k?si=TugcdCRi-0B9cgwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              2023年10月末時点での、ゲームクリエイター甲子園への作品提出時における<br>
+              ゲームプレイ動画になります。
+            </p>
+
             <h3>ダウンロード</h3>
             <p>
               <h4>
                 <a href="https://gameparade.creators-guild.com/works/1676" target="_blank" rel="noopener">闇撃ちの影法師（みんなのゲームパレード）</a>
               </h4>
               ゲームクリエイター甲子園の作品ページになります。こちらのページからダウンロードができます。<br>
+              <br>
+            </p>
+
+            <h3>関連記事</h3>
+            <p>
+              <h4>
+                <a href="https://mrgamehit.com/blog/report/gcgexpo-2023/" target="_blank" rel="noopener">ゲームクリエイターズギルドEXPO 2023に行ってみたレポート</a>
+              </h4>
+              Mr.GAMEHITさんに、ゲームクリエイターズギルド EXPO出展時の紹介記事を<br>
+              記載していただきました。<br>
               <br>
             </p>
 
